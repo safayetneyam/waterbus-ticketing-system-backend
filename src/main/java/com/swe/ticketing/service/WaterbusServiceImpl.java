@@ -18,6 +18,7 @@ public class WaterbusServiceImpl implements WaterbusService {
 	@Override
 	public AddWaterbus regiWaterbus(AddWaterbus addWaterbus) {
 		// TODO Auto-generated method stub
+		System.out.println("inside waterbus service");
 		return waterbusRepository.save(addWaterbus);
 	}
 

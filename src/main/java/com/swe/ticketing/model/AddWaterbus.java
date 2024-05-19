@@ -15,13 +15,9 @@ public class AddWaterbus {
 	private String name;
 	private String type; // decorator
 	private String category; // factory
-	private int baseFare = 10;
+	private int baseFare;
 	private int capacity;
 	
-	public AddWaterbus() {
-		
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -30,11 +26,11 @@ public class AddWaterbus {
 		this.id = id;
 	}
 
-	public String getWaterbusName() {
+	public String getName() {
 		return name;
 	}
 
-	public void setWaterbusName(String waterbusName) {
+	public void setName(String waterbusName) {
 		this.name = waterbusName;
 	}
 
@@ -62,11 +58,11 @@ public class AddWaterbus {
 		this.baseFare = baseFare;
 	}
 
-	public int getSeatCapacity() {
+	public int getCapacity() {
 		return capacity;
 	}
 
-	public void setSeatCapacity(int seatCapacity) {
+	public void setCapacity(int seatCapacity) {
 		this.capacity = seatCapacity;
 	}
 }

@@ -24,6 +24,7 @@ public class WaterbusController {
 	@PostMapping("/regi")
 	public String regi(@RequestBody AddWaterbus addWaterbus) {
 		waterbusService.regiWaterbus(addWaterbus);
+		System.out.println("inside /regi");
 		return "A new waterbus is registered!";
 	}
 	
