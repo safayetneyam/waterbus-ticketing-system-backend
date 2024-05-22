@@ -10,14 +10,14 @@ import jakarta.persistence.Id;
 public class AddWaterbus {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
+
 	private int id;
 	private String name;
 	private String type; // decorator
 	private String category; // factory
-	private int baseFare;
+	private int basefare;
 	private int capacity;
-	
+
 	public int getId() {
 		return id;
 	}
@@ -50,12 +50,12 @@ public class AddWaterbus {
 		this.category = category;
 	}
 
-	public int getBaseFare() {
-		return baseFare;
+	public int getBasefare() {
+		return basefare;
 	}
 
-	public void setBaseFare(int baseFare) {
-		this.baseFare = baseFare;
+	public void setBasefare(int baseFare) {
+		this.basefare = baseFare;
 	}
 
 	public int getCapacity() {

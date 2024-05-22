@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.swe.ticketing.model.AddSchedule;
 import com.swe.ticketing.model.AddWaterbus;
+import com.swe.ticketing.repository.ScheduleRepository;
 import com.swe.ticketing.repository.WaterbusRepository;
 
 @Service
@@ -27,5 +29,25 @@ public class WaterbusServiceImpl implements WaterbusService {
 		// TODO Auto-generated method stub
 		return waterbusRepository.findAll();
 	}
+
+	
+	@Autowired
+	private ScheduleRepository scheduleRepository;
+	
+	@Override
+	public AddSchedule saveSchedule(AddSchedule addSchedule) {
+		// TODO Auto-generated method stub
+		return scheduleRepository.save(addSchedule);
+	}
+
+	@Override
+	public List<AddSchedule> getAllSchedule() {
+		// TODO Auto-generated method stub
+		return scheduleRepository.findAll();
+	}
+
+	
+	
+	// 
 	
 }
