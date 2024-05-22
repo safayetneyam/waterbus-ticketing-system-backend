@@ -22,9 +22,6 @@ import com.swe.ticketing.service.WaterbusService;
 @RequestMapping("/waterbus")
 @CrossOrigin // Access from origin is blocked by CORS policy
 public class WaterbusController {
-	
-	public int tid = 0;
-	
 	@Autowired
 	private WaterbusService waterbusService;
 	
@@ -42,9 +39,8 @@ public class WaterbusController {
 	
 	@PostMapping("/schedule")
 	public String schedule(@RequestBody AddSchedule addSchedule) {
-		tid++; // trip id
-		
 		int wbId = addSchedule.getWaterbusid();
+		int tripid = addSchedule.getTripid() + 1;
 		String startTime, arrivalTime;
 		startTime = addSchedule.getTime();
 		// System.out.println(startTime);
@@ -68,7 +64,7 @@ public class WaterbusController {
 			arrivalTime = String.format("%02d:%02d", hours, minutes);
 			
 			AddSchedule scheduleRow = new AddSchedule();
-			scheduleRow.setTripid(tid);
+			scheduleRow.setTripid(tripid);
 			scheduleRow.setDeparture(locations[i]);
 			scheduleRow.setWaterbusid(wbId);
 			scheduleRow.setDir("UP");
@@ -98,7 +94,7 @@ public class WaterbusController {
             arrivalTime = String.format("%02d:%02d", hours, minutes);
             
             AddSchedule scheduleRow = new AddSchedule();
-			scheduleRow.setTripid(tid);
+			scheduleRow.setTripid(tripid);
 			scheduleRow.setDeparture(locations[i]);
 			scheduleRow.setWaterbusid(wbId);
 			scheduleRow.setDir("DOWN");
