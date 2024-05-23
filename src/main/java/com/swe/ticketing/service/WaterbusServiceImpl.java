@@ -1,6 +1,7 @@
 package com.swe.ticketing.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,8 +30,13 @@ public class WaterbusServiceImpl implements WaterbusService {
 		// TODO Auto-generated method stub
 		return waterbusRepository.findAll();
 	}
-
 	
+	@Override
+	public Optional<AddWaterbus> getWaterbusById(int id) {
+		// TODO Auto-generated method stub
+		return waterbusRepository.findById(id);
+	}
+
 	@Autowired
 	private ScheduleRepository scheduleRepository;
 	

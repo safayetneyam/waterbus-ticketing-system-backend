@@ -11,8 +11,8 @@ public class IssueTicket {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 	private int ticketid;
-	private int id;
-	private String name;
+	private int wbid;
+	private String wbname;
 	private String type;
 	private String category; 
 	private int seat_count;
@@ -29,17 +29,17 @@ public class IssueTicket {
 	public void setTicketid(int ticketid) {
 		this.ticketid = ticketid;
 	}
-	public int getId() {
-		return id;
+	public int getWbid() {
+		return wbid;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setWbid(int wbid) {
+		this.wbid = wbid;
 	}
-	public String getName() {
-		return name;
+	public String getWbname() {
+		return wbname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setWbname(String wbname) {
+		this.wbname = wbname;
 	}
 	public String getType() {
 		return type;

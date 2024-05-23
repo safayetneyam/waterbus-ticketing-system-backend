@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.swe.ticketing.model.Dec_AC;
 import com.swe.ticketing.model.Dec_BaseWaterbus;
 import com.swe.ticketing.model.Dec_NonAC;
@@ -19,6 +20,8 @@ public class FetchBaseFareController {
 	Dec_Waterbus acWb = new Dec_AC (new Dec_BaseWaterbus());
 	Dec_Waterbus nonacWb = new Dec_NonAC (new Dec_BaseWaterbus());
 	
+	//System.out.println(acWb.cost())
+	
 	//factory
 	Fac_CategoryFactory cf = new Fac_CategoryFactory();  
 	
@@ -31,5 +34,5 @@ public class FetchBaseFareController {
 		FetchBaseFare fetchBaseFare = new FetchBaseFare(acWb.cost(), nonacWb.cost(), luxWb.catRate(), ordWb.catRate());
 		return fetchBaseFare;
 	}
-
+	
 }

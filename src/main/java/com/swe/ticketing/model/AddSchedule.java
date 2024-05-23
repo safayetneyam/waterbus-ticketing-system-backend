@@ -19,6 +19,7 @@ public class AddSchedule {
 	private String time;
 	private String dir; //direction
 	private String date;
+	
 	public int getScheduleid() {
 		return scheduleid;
 	}
